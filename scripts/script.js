@@ -11,3 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `next-page.html?username=${username}`;
     });
 });
+
+
+
+// https://github.com/nevilparmar11

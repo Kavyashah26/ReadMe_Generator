@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1 id="test">hello</h1>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>README Generator</title>
+      <link rel="stylesheet" type="text/css" href="styles/final-page.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="skills">
 
+            <!-- Skills section -->
+            <div id="skillsContainer" >
+               <h2>Select Skills:</h2>
 
-    
-    <script src="./scripts/final-page.js"></script>
-</body>
+               <div class="column" id="leftColumn">
+                  <!-- Left column skills -->
+                  <input type="checkbox" class="skillCheckbox" id="javascriptCheckbox" data-skill-name="JavaScript" data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                  <label for="javascriptCheckbox">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="JavaScript" class="skillImage">
+                  JavaScript
+                  </label>
+               </div>
+
+               <div class="column" id="middleColumn">
+                  <!-- Middle column skills -->
+                  <input type="checkbox" class="skillCheckbox" id="typescriptCheckbox" data-skill-name="TypeScript" data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+                  <label for="typescriptCheckbox">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="TypeScript" class="skillImage">
+                  TypeScript
+                  </label>
+               </div>
+
+               <div class="column" id="rightColumn">
+                  <!-- Right column skills -->
+                  <input type="checkbox" class="skillCheckbox" id="reactCheckbox" data-skill-name="React" data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+                  <label for="reactCheckbox">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="React" class="skillImage">
+                  React
+                  </label>
+               </div>
+
+            </div>
+
+         </div>
+      </div>
+      
+      <br>
+      <button id="downloadButton">Download README</button>
+      <!-- </div> -->
+      <script src="./scripts/final-page.js"></script>
+   </body>
 </html>
-
-

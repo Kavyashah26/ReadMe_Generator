@@ -5,10 +5,22 @@ body {
     margin: 20px;
 }
 
-#skillsContainer {
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills {
+    display: flex;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.panel {
     margin-right: 20px;
     background-color: #333;
     padding: 20px;
+    /* padding-right: 10px; */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -36,6 +48,7 @@ label {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+    
 }
 
 #downloadButton:hover {
@@ -50,6 +63,7 @@ input[type="checkbox"] {
 input[type="checkbox"] + label {
     cursor: pointer;
     padding: 5px;
+    padding-right: 30px;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
@@ -58,11 +72,8 @@ input[type="checkbox"]:checked + label {
     background-color: #555;
 }
 
-
-
-
 .column {
-    width: 28%;
+    width: 26%;
     display: inline-block;
     vertical-align: top;
     margin-right: 20px;
@@ -75,10 +86,134 @@ input[type="checkbox"]:checked + label {
         margin-bottom: 20px;
     }
 }
-/* .container{
-    display: flexbox;
+
+
+textarea, #preview {
+            width: 45%;
+            height: 300px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #preview {
+            border: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    margin: 20px;
+    margin-bottom: 60px; /* Adjust the value to leave space for the fixed button */
 }
-.skills{
-    /* margin-right: 60%; 
-    left: 50px;
-} */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills {
+    display: flex;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.panel {
+    margin-right: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, label {
+    color: #fff;
+}
+
+.skillImage {
+    margin-right: 10px;
+}
+
+#downloadButton {
+    /* position: fixed; */
+    bottom: 20px; /* Adjust the value as needed */
+    left: 50%;
+    margin-left:50% ;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements if needed */
+}
+
+#downloadButton:hover {
+    background-color: #45a049;
+}
+
+/* Dynamic styling for checkboxes */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+    padding: 5px;
+    padding-right: 30px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: #555;
+}
+
+.column {
+    width: 26%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+textarea, #preview {
+    width: 45%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#preview {
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    position: absolute;
+    margin-top: -940px;
+    margin-left: 700px;
+    height: 73vh;
+}
+
+
+#copyButton {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+

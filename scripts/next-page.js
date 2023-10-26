@@ -32,6 +32,6 @@ aboutMeForm.addEventListener('click', function(event) {
     const funFact = document.getElementById('fun-fact').value;
 
     // Redirect to the next page with all the data as query parameters
-    const redirectURL = `final-page.html?username=${username}&currently-working-on=${currentlyWorkingOn}&looking-to-collaborate=${lookingToCollaborate}&looking-for-help=${lookingForHelp}&currently-learning=${currentlyLearning}&ask-me-about=${askMeAbout}&fun-fact=${funFact}`;
+    const redirectURL = `final-page.html?username=${username}&🔭currently-working-on=${currentlyWorkingOn}&👯looking-to-collaborate=${lookingToCollaborate}&🤝looking-for-help=${lookingForHelp}&🌱currently-learning=${currentlyLearning}&💬ask-me-about=${askMeAbout}&⚡fun-fact=${funFact}`;
     window.location.href = redirectURL;
 })

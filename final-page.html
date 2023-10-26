@@ -1,54 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>README Generator</title>
-      <link rel="stylesheet" type="text/css" href="styles/final-page.css">
-   </head>
-   <body>
-      <div class="container">
-         <div class="skills">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles/final-page.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="skills">
             <!-- Skills section -->
-            <div id="skillsContainer" >
-               <h2>Select Skills:</h2>
+            <div class="panel" id="leftPanel">
+                <h2>Select Skills:</h2>
+                <div class="column">
+                    <!-- Left column skills -->
+                    <input type="checkbox" class="skillCheckbox" id="javascriptCheckbox" data-skill-name="JavaScript"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                    <label for="javascriptCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            height="30" alt="JavaScript" class="skillImage">
+                        JavaScript
+                    </label>
 
-               <div class="column" id="leftColumn">
-                  <!-- Left column skills -->
-                  <input type="checkbox" class="skillCheckbox" id="javascriptCheckbox" data-skill-name="JavaScript" data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-                  <label for="javascriptCheckbox">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="JavaScript" class="skillImage">
-                  JavaScript
-                  </label>
-               </div>
+                    <input type="checkbox" class="skillCheckbox" id="cppCheckbox" data-skill-name="cpp"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">
+                    <label for="cppCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                            height="30" alt="cpp" class="skillImage">
+                        c++
+                    </label>
 
-               <div class="column" id="middleColumn">
-                  <!-- Middle column skills -->
-                  <input type="checkbox" class="skillCheckbox" id="typescriptCheckbox" data-skill-name="TypeScript" data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
-                  <label for="typescriptCheckbox">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="TypeScript" class="skillImage">
-                  TypeScript
-                  </label>
-               </div>
+                    <input type="checkbox" class="skillCheckbox" id="androidCheckbox" data-skill-name="android"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg">
+                    <label for="androidCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+                            height="30" alt="android" class="skillImage">
+                            android
+                    </label>
 
-               <div class="column" id="rightColumn">
-                  <!-- Right column skills -->
-                  <input type="checkbox" class="skillCheckbox" id="reactCheckbox" data-skill-name="React" data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-                  <label for="reactCheckbox">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="React" class="skillImage">
-                  React
-                  </label>
-               </div>
+                    <input type="checkbox" class="skillCheckbox" id="angularjsCheckbox" data-skill-name="angularjs"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
+                    <label for="angularjsCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                            height="30" alt="angularjs" class="skillImage">
+                            angularjs
+                    </label>
 
+                    <input type="checkbox" class="skillCheckbox" id="apachekafkaCheckbox" data-skill-name="apachekafka"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg">
+                    <label for="apachekafkaCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                            height="30" alt="apachekafka" class="skillImage">
+                            apachekafka
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="apacheCheckbox" data-skill-name="apache"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg">
+                    <label for="apacheCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
+                            height="30" alt="apache" class="skillImage">
+                            apache
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="appwrite" data-skill-name="appwrite"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg">
+                    <label for="appwrite">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg"
+                            height="30" alt="appwrite" class="skillImage">
+                            appwrite
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="arduino" data-skill-name="arduino"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg">
+                    <label for="arduino">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"
+                            height="30" alt="arduino" class="skillImage">
+                            arduino
+                    </label>
+                </div>
+
+                <div class="column">
+                    <!-- Middle column skills -->
+                    <input type="checkbox" class="skillCheckbox" id="typescriptCheckbox" data-skill-name="TypeScript"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+                    <label for="typescriptCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                            height="30" alt="TypeScript" class="skillImage">
+                        TypeScript
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="azure" data-skill-name="azure"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg">
+                    <label for="azure">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                            height="30" alt="TypeScript" class="skillImage">
+                            azure
+                    </label>
+
+                    
+                    <input type="checkbox" class="skillCheckbox" id="bash" data-skill-name="bash"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg">
+                    <label for="bash">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                            height="30" alt="bash" class="skillImage">
+                            bash
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="bootstrap" data-skill-name="bootstrap"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg">
+                    <label for="bootstrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            height="30" alt="bootstrap" class="skillImage">
+                            bootstrap
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="c" data-skill-name="c"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg">
+                    <label for="c">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                            height="30" alt="c" class="skillImage">
+                            c
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="centos" data-skill-name="centos"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/centos/centos-original.svg">
+                    <label for="centos">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/centos/centos-original.svg"
+                            height="30" alt="centos" class="skillImage">
+                            centos
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="chrome" data-skill-name="chrome"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg">
+                    <label for="chrome">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg"
+                            height="30" alt="chrome" class="skillImage">
+                            chrome
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="cmake" data-skill-name="cmake"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg">
+                    <label for="cmake">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
+                            height="30" alt="cmake" class="skillImage">
+                            cmake
+                    </label>
+
+                </div>
+
+                <div class="column">
+                    <!-- Right column skills -->
+                    <input type="checkbox" class="skillCheckbox" id="reactCheckbox" data-skill-name="React"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+                    <label for="reactCheckbox">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30"
+                            alt="React" class="skillImage">
+                        React
+                    </label>
+                    
+                    <input type="checkbox" class="skillCheckbox" id="csharp" data-skill-name="csharp"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
+                    <label for="csharp">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                            height="30" alt="csharp" class="skillImage">
+                            csharp
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="css3" data-skill-name="css3"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                    <label for="css3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            height="30" alt="css3" class="skillImage">
+                            css3
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="dart" data-skill-name="dart"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg">
+                    <label for="dart">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                            height="30" alt="dart" class="skillImage">
+                            dart
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="debian" data-skill-name="debian"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg">
+                    <label for="debian">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg"
+                            height="30" alt="debian" class="skillImage">
+                            debian
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="denojs" data-skill-name="denojs"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/denojs/denojs-original.svg">
+                    <label for="denojs">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/denojs/denojs-original.svg"
+                            height="30" alt="denojs" class="skillImage">
+                            denojs
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="digitalocean" data-skill-name="digitalocean"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg">
+                    <label for="digitalocean">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+                            height="30" alt="digitalocean" class="skillImage">
+                            digitalocean
+                    </label>
+
+                    <input type="checkbox" class="skillCheckbox" id="docker" data-skill-name="TypeScript"
+                        data-skill-image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+                    <label for="docker">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            height="30" alt="TypeScript" class="skillImage">
+                            docker
+                    </label>
+
+                </div>
             </div>
 
-         </div>
-      </div>
-      
-      <br>
-      <button id="downloadButton">Download README</button>
-      <!-- </div> -->
-      <script src="./scripts/final-page.js"></script>
-   </body>
+            <!--  -->
+        </div>
+    </div>
+
+    <br>
+    <!-- Add this button to your HTML -->
+    
+    <!-- </div> -->
+    
+    <button id="copyButton">Copy README to Clipboard</button>
+    <br><br>
+    <textarea id="markdownInput" placeholder="Enter your Markdown here..."></textarea>
+    <br><br>
+    <button id="downloadButton">Download README</button>
+
+    <div id="preview"></div>
+    <script src="./scripts/final-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2"></script>
+
+    
+</body>
+
 </html>

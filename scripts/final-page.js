@@ -49,6 +49,25 @@ async function generateReadme() {
     const urlParams = new URLSearchParams(window.location.search);
     const url = "?" + urlParams.toString();
     const customText = parseURLParams(url);
+
+    var outputString = "";
+
+for (var key in customText) {
+    if (customText.hasOwnProperty(key)) {
+        if (customText[key] && customText[key].length > 0 && customText[key] != "") {
+        outputString += " " + key + ": ";
+
+        // Check if the property exists and has values before trying to join them
+            outputString += "" + customText[key].join(", ") + "\n";
+            
+            outputString += "--------\n";
+        } 
+    }
+}
+
+// Now you can use the 'outputString' variable in your readme
+console.log(outputString);
+
     // const additionalData = parseURLParams(window.location.href);
 
     // Extract relevant data from URL parameters
@@ -60,39 +79,54 @@ async function generateReadme() {
     const snakeAnimation = '<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />';
 
     // Languages graph
-    const languagesGraph = `<img src="https://github-readme-stats.vercel.app/api/top-langs?username=${githubData.login}&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=light&hide_border=false" height="150" alt="languages graph" />`;
+    const languagesGraph = `<img src="https://github-readme-stats.vercel.app/api/top-langs?username=${username}&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=light&hide_border=false" height="150" alt="languages graph" />`;
 
-    // Selected Skills
-    // const selectedSkills = [
-    //     { name: "JavaScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    //     { name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-    //     { name: "React", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    //     // Add more skills as needed
-    // ];
 
     const skillsSection = selectedSkills.length > 0
         ? `\n\n${selectedSkills.map(skill => ` <img src="${skill.image}" height="30" alt="${skill.name}" class="skillImage"> `).join("")}`
         : '';
 
     // Generate README content
-    const readmeContent = `# ${githubData.name}'s GitHub Profile
+    const readmeContent = `
+    # ${githubData.name}'s GitHub Profile
 
-${snakeAnimation}
+
+    
+<div align="center">
+  <img height="150" src="https://camo.githubusercontent.com/62da68eb62b1e5f175f7d1f0191dd89a653d7908feb22d37d4a0ab07365d6791/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f4d3967624264396e6244724f5475314d71782f67697068792e676966"  />
+</div>
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${githubData.login}&show_icons=true)
+
+
+
+
+## Languag graph
+${languagesGraph}
+
+##
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=${username}&limit=5&theme=light&combine_all_yearly_contributions=true)
+
+###
+
+<div align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=${username}.${username}&"  />
+</div>
 
 ## About Me
 
 - **Bio:** ${githubData.bio || "N/A"}
 - **Location:** ${githubData.location || "N/A"}
 
-## Skills
+## 🛠 Skills
 
 ${skillsSection}
 
+
 ## Additional Information
 
-- **Custom Text:** ${customText}
+- ${outputString}
 
 ## Contact Me
 
@@ -153,3 +187,37 @@ function updateSelectedSkills() {
             updateSelectedSkills();
             downloadReadme();
         });
+
+
+
+        document.getElementById('markdownInput').addEventListener('input', updatePreview);
+        const readmeContent =  generateReadme();
+        console.log(readmeContent);
+
+        function updatePreview() {
+            const markdownInput = document.getElementById('markdownInput').value;
+            const preview = document.getElementById('preview');
+            preview.innerHTML = DOMPurify.sanitize(marked(markdownInput));
+        }
+
+
+        // Function to copy text to clipboard
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+}
+
+// Event listener for the "Copy" button
+const copyButton = document.getElementById('copyButton');
+copyButton.addEventListener('click', () => {
+    updateSelectedSkills(); // Make sure selectedSkills is up-to-date
+    generateReadme().then((content) => {
+        copyToClipboard(content);
+        // console.log(content)
+        alert('README content copied to clipboard!');
+    });
+});

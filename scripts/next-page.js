@@ -1,6 +1,8 @@
- // Function to get the value of a query parameter from the URL
+ // getQueryParam gets the value of a query parameter from the URL
  function getQueryParam(name) {
+    //Interface based obkect
     const urlParams = new URLSearchParams(window.location.search);
+    // console.log(urlParams)
     return urlParams.get(name);
 }
 
@@ -8,22 +10,20 @@
 const username = getQueryParam('username');
 
 if (username) {
-    // Display the username on the page
     const usernameDisplay = document.getElementById('username-display');
     usernameDisplay.textContent = `GitHub Username: ${username}`;
 } else {
-    // Handle the case when no username is provided
+    //Handleing case of tempering with url
     alert('No username provided.');
-    // confirm("Press a button!");
 }
 
 // Form submission handler
 const aboutMeForm = document.querySelector('.submit-button');
-console.log(aboutMeForm);
+// console.log(aboutMeForm);
 aboutMeForm.addEventListener('click', function(event) {
     event.preventDefault();
-    console.log("In submit");
-    // Get values from the form
+    
+    // Extracting values from form
     const currentlyWorkingOn = document.getElementById('currently-working-on').value;
     const lookingToCollaborate = document.getElementById('looking-to-collaborate').value;
     const lookingForHelp = document.getElementById('looking-for-help').value;

@@ -201,9 +201,9 @@ textarea, #preview {
     border: 1px solid #ccc;
     overflow-y: auto;
     position: absolute;
-    margin-top: -940px;
+    margin-top: -87%;
     margin-left: 700px;
-    height: 73vh;
+    height: 90vh;
 }
 
 
